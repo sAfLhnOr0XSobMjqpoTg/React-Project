@@ -24,3 +24,6 @@ createRoot(document.getElementById("root")).render(
 		</CurrencyProvider>
 	</SidebarProvider>
 );
+
+
+// createRoot(document.getElementById("root")).render(<SidebarProvider><CartProvider><ProductProvider><Router><App/></Router></ProductProvider></CartProvider></SidebarProvider>)

@@ -17,7 +17,7 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   function signup(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -41,6 +41,7 @@ export function AuthProvider({ children }) {
       if (user) {
         setLoading(false);
       }
+      return unsubscribe;
     });
 
     return () => {};
